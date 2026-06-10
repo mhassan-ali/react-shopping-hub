@@ -1,13 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import { useState } from "react";
-import { Heart, ShoppingCart, Menu, X, Search } from "lucide-react"; // ✅ Lucide Icons
+import { Heart, ShoppingCart, Menu, X, Search } from "lucide-react"; // Lucide Icons
 
 export default function Navbar() {
   const { totalQuantity, wishlistItems } = useCart();
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // ✅ Mobile State
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Mobile State
 
   return (
     <nav className="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b border-white/20 shadow-sm">
@@ -89,7 +89,7 @@ export default function Navbar() {
               )}
             </Link>
 
-            {/* ✅ Mobile Menu Toggle */}
+            {/*  Mobile Menu Toggle */}
             <button 
               className="md:hidden p-2 text-gray-600"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
-import { Heart } from "lucide-react"; // ✅ Lucide Import
+import { Heart } from "lucide-react"; //  Lucide Import
 
 export default function ProductCard({ product }) {
   const { addToCart, wishlistItems, toggleWishlist } = useCart();
@@ -20,7 +20,7 @@ export default function ProductCard({ product }) {
           </div>
         </Link>
 
-        {/* ✅ A11y & Lucide Heart */}
+        {/*  A11y & Lucide Heart */}
         <button
           onClick={() => toggleWishlist(product)}
           className={`absolute top-3 right-3 bg-white/90 backdrop-blur-sm p-2.5 rounded-full shadow-sm transition-all duration-300 hover:scale-110 ${

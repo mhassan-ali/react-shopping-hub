@@ -8,27 +8,27 @@ import {
 const CartContext = createContext();
 
 export function CartProvider({ children }) {
-  // ✅ Persistent Cart
+  //  Persistent Cart
   const [cartItems, setCartItems] = useState(() => {
     const storedCart = localStorage.getItem("cart");
     return storedCart ? JSON.parse(storedCart) : [];
   });
 
-  // ✅ Persistent Wishlist
+  //  Persistent Wishlist
   const [wishlistItems, setWishlistItems] = useState(() => {
     const storedWishlist = localStorage.getItem("wishlist");
     return storedWishlist ? JSON.parse(storedWishlist) : [];
   });
 
-  // ✅ Toast
+  //  Toast
   const [toastMessage, setToastMessage] = useState("");
 
-  // ✅ Persist cart
+  //  Persist cart
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cartItems));
   }, [cartItems]);
 
-  // ✅ Persist wishlist
+  //  Persist wishlist
   useEffect(() => {
     localStorage.setItem(
       "wishlist",
@@ -36,7 +36,7 @@ export function CartProvider({ children }) {
     );
   }, [wishlistItems]);
 
-  // ✅ Add to Cart
+  //  Add to Cart
   function addToCart(product) {
     setCartItems((prev) => {
       const existingItem = prev.find(
@@ -57,14 +57,14 @@ export function CartProvider({ children }) {
       return [...prev, { ...product, quantity: 1 }];
     });
 
-    // ✅ Toast
+    //  Toast
     setToastMessage(`${product.name} added to cart ✅`);
     setTimeout(() => {
       setToastMessage("");
     }, 2000);
   }
 
-  // ✅ Increase quantity
+  //  Increase quantity
   function increaseQuantity(id) {
     setCartItems((prev) =>
       prev.map((item) =>
@@ -75,7 +75,7 @@ export function CartProvider({ children }) {
     );
   }
 
-  // ✅ Decrease quantity
+  //  Decrease quantity
   function decreaseQuantity(id) {
     setCartItems((prev) =>
       prev
@@ -91,19 +91,19 @@ export function CartProvider({ children }) {
     );
   }
 
-  // ✅ Remove item
+  //  Remove item
   function removeItem(id) {
     setCartItems((prev) =>
       prev.filter((item) => item.id !== id)
     );
   }
 
-  // ✅ Clear cart
+  //  Clear cart
   function clearCart() {
     setCartItems([]);
   }
 
-  // ✅ Wishlist toggle
+  //  Wishlist toggle
   function toggleWishlist(product) {
     const exists = wishlistItems.find(
       (item) => item.id === product.id
@@ -121,7 +121,7 @@ export function CartProvider({ children }) {
     }
   }
 
-  // ✅ Derived values
+  //  Derived values
   const totalQuantity = cartItems.reduce(
     (total, item) => total + item.quantity,
     0

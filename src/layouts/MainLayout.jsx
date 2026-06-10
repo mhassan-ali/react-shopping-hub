@@ -8,25 +8,25 @@ export default function MainLayout() {
   return (
     <div className="min-h-screen flex flex-col bg-linear-to-br from-gray-50 via-white to-gray-100 text-gray-800">
 
-      {/* ✅ Glass Navbar */}
+      {/*  Glass Navbar */}
       <Navbar />
 
-      {/* ✅ Page Content */}
+      {/*  Page Content */}
       <main className="flex-1 max-w-7xl mx-auto w-full px-6 pt-12">
         <PageWrapper>
           <Outlet />
         </PageWrapper>
       </main>
 
-      {/* ✅ Luxury Animated Footer */}
+      {/*  Luxury Animated Footer */}
       <footer className="relative mt-24 bg-[#0A0A0B] text-zinc-400 overflow-hidden">
 
-        {/* ✅ Animated Gradient Glow Line */}
+        {/*  Animated Gradient Glow Line */}
         <div className="absolute inset-x-0 top-0 h-0.5 overflow-hidden">
           <div className="w-[200%] h-full bg-linear-to-r from-transparent via-indigo-500/40 to-transparent animate-footerGlow" />
         </div>
 
-        {/* ✅ Parallax Background Glows */}
+        {/*  Parallax Background Glows */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-20 -left-20 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl animate-parallaxSlow" />
           <div className="absolute bottom-0 right-0 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl animate-parallaxSlow2" />
@@ -37,7 +37,7 @@ export default function MainLayout() {
           <div className="max-w-7xl mx-auto px-6 py-20 relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
 
-              {/* ✅ Brand */}
+              {/*  Brand */}
               <div
                 className="md:col-span-5 opacity-0 animate-footerFade"
                 style={{ animationDelay: "0.1s" }}
@@ -54,7 +54,7 @@ export default function MainLayout() {
                 </p>
               </div>
 
-              {/* ✅ Shop Links */}
+              {/*  Shop Links */}
               <div
                 className="md:col-span-2 opacity-0 animate-footerFade"
                 style={{ animationDelay: "0.2s" }}
@@ -90,7 +90,7 @@ export default function MainLayout() {
                 </ul>
               </div>
 
-              {/* ✅ Support */}
+              {/*  Support */}
               <div
                 className="md:col-span-2 opacity-0 animate-footerFade"
                 style={{ animationDelay: "0.3s" }}
@@ -121,7 +121,7 @@ export default function MainLayout() {
                 </ul>
               </div>
 
-              {/* ✅ Contact */}
+              {/*  Contact */}
               <div
                 className="md:col-span-3 opacity-0 animate-footerFade"
                 style={{ animationDelay: "0.4s" }}
@@ -157,7 +157,7 @@ export default function MainLayout() {
             </div>
           </div>
 
-          {/* ✅ Bottom Bar */}
+          {/*  Bottom Bar */}
           <div className="border-t border-white/6 relative z-10">
             <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-xs text-zinc-600">
@@ -185,7 +185,7 @@ export default function MainLayout() {
 
       </footer>
 
-      {/* ✅ Toast */}
+      {/*  Toast */}
       <Toast />
 
     </div>

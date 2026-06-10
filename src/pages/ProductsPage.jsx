@@ -8,7 +8,7 @@ export default function ProductsPage() {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
 
-  // ✅ New State for Async Data
+  //  New State for Async Data
   const [allProducts, setAllProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -16,7 +16,7 @@ export default function ProductsPage() {
   const searchQuery = searchParams.get("search");
   const sortOption = searchParams.get("sort");
 
-  // ✅ Fetch data on mount
+  //  Fetch data on mount
   useEffect(() => {
     setIsLoading(true);
     fetchProducts().then((data) => {
@@ -25,7 +25,7 @@ export default function ProductsPage() {
     });
   }, []);
 
-  // ✅ Filtering Logic (applied to allProducts now)
+  //  Filtering Logic (applied to allProducts now)
   let filteredProducts = allProducts;
 
   if (selectedCategory) {
@@ -40,7 +40,7 @@ export default function ProductsPage() {
     );
   }
 
-  // ✅ Sorting Logic
+  //  Sorting Logic
   if (sortOption === "price-asc") {
     filteredProducts = [...filteredProducts].sort((a, b) => a.price - b.price);
   }
@@ -81,7 +81,7 @@ export default function ProductsPage() {
         </select>
       </div>
 
-      {/* ✅ Loading State OR Product Grid */}
+      {/*  Loading State OR Product Grid */}
       {isLoading ? (
         <div className="py-20 text-center flex flex-col items-center justify-center space-y-4">
           <div className="w-10 h-10 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>

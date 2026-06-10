@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export default function CheckoutPage() {
  const { cartItems, totalPrice, clearCart } = useCart(); 
   const navigate = useNavigate();
-  // ✅ Redirect if cart is empty
+  //  Redirect if cart is empty
 if (cartItems.length === 0) {
   navigate("/products");
   return null;

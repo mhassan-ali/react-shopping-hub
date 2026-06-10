@@ -166,7 +166,8 @@
   width: 100%;
 
   &::before,
-  &::after {
+  &::after
+   {
     content: '';
     position: absolute;
     top: -4.5px;

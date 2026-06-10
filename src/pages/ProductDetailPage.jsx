@@ -62,7 +62,7 @@ export default function ProductDetailPage() {
 
   return (
     <>
-      {/* ✅ Breadcrumb */}
+      {/*  Breadcrumb */}
       <nav className="text-sm text-gray-500">
         <ul className="flex items-center gap-2 flex-wrap">
           <li>
