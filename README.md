@@ -1,16 +1,173 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# 🛍️ SHOPUI – Modern E-Commerce Frontend
 
-## React Compiler
+A modern and responsive e-commerce web application built with **React + Vite**.  
+SHOPUI provides a clean shopping experience with product browsing, wishlist management, cart functionality, and checkout flow.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Live Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🏠 Beautiful Home page with hero section  
+- 🛒 Add to Cart functionality  
+- ❤️ Wishlist management  
+- 🔍 Product search  
+- 📦 Product detail page  
+- 🧾 Cart page with quantity control  
+- 💳 Checkout page with shipping & payment options  
+- ⭐ Product rating component  
+- 🔔 Toast notifications  
+- 🔄 Scroll to top on route change  
+- ✨ Smooth fade-in animations  
+- 📱 Fully responsive design  
+
+---
+
+## 🛠️ Tech Stack
+
+- **React**
+- **Vite**
+- **React Router**
+- **Context API** (Global Cart State)
+- **JavaScript (ES6+)**
+- **CSS3**
+- **ESLint**
+
+---
+
+## 📁 Project Structure
+
+```
+online-shop/
+│
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── FadeInSection.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── PageWrapper.jsx
+│   │   ├── ProductCard.jsx
+│   │   ├── ScrollToTop.jsx
+│   │   ├── StarRating.jsx
+│   │   └── Toast.jsx
+│   │
+│   ├── context/
+│   │   └── CartContext.jsx
+│   │
+│   ├── data/
+│   │   └── products.js
+│   │
+│   ├── layouts/
+│   │   └── MainLayout.jsx
+│   │
+│   ├── pages/
+│   │   ├── HomePage.jsx
+│   │   ├── ProductsPage.jsx
+│   │   ├── ProductDetailPage.jsx
+│   │   ├── CartPage.jsx
+│   │   ├── WishlistPage.jsx
+│   │   └── CheckoutPage.jsx
+│   │
+│   ├── routes/
+│   │   └── index.jsx
+│   │
+│   ├── services/
+│   │   └── api.js
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── styles
+│
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/online-shop.git
+```
+
+Navigate into the project directory:
+
+```bash
+cd online-shop
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview production build:
+
+```bash
+npm run preview
+```
+
+---
+
+## 🧠 State Management
+
+The project uses **React Context API** for managing:
+
+- Cart items
+- Wishlist items
+- Quantity updates
+- Total price calculation
+
+---
+
+## 🎨 UI Highlights
+
+- Clean and modern gradient buttons
+- Card-based product layout
+- Order summary sidebar
+- Interactive quantity controls
+- Elegant checkout form
+- Animated UI transitions
+
+---
+
+## 📌 Future Improvements
+
+- ✅ Backend integration
+- ✅ User authentication
+
+---
+
+## 📄 License
+
+This project is open-source and available under the **MIT License**.
+
+---
+
+## 👨‍💻 Author
+
+Developed by **[Muhammad Hassan Ali]**  
+Feel free to connect and contribute!
+
+---
+
